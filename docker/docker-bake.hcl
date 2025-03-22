@@ -125,6 +125,12 @@ target "debian-armv6" {
   tags = generate_tags("", "-armv6")
 }
 
+target "debian-armv5" {
+  inherits = ["debian"]
+  platforms = ["linux/arm/v5"]
+  tags = generate_tags("", "-armv5")
+}
+
 // ==== Start of unsupported Debian architecture targets ===
 // These are provided just to help users build for these rare platforms
 // They will not be built by default
